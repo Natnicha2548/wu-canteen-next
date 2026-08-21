@@ -7,7 +7,7 @@ export async function GET() {
   const { data, error } = await supabase
     .from("dishes")
     .select(`
-      id, name, price, calories, image_url, spice_level, sugar_level, 
+      id, name, price, calories, image_url, spice_level, sugar_level, is_active,
       categories (name), chefs (name),
       dish_ingredients (ingredient, sort_order),
       dish_allergens (allergen)
